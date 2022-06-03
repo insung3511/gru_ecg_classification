@@ -1,0 +1,4 @@
+Jun. 03. 2022. (B. InSung)
+- Torch로 구성 중에 자꾸만 Size Erorr 발생. 이를 해결 하기 위해 Tensorflow 로 변경하기로 결정.
+    - 전에도 그렇고 자꾸만 Input Size에서 계속 부딫치게 됨. Still Stucking!
+    - 다시 텐서플로우로 할려닌까 이제는 내가 모르겠다. 다시 토치로 간다.
