@@ -7,3 +7,31 @@
 
 이 외의 질문이나 혹은 문제점이 있다면 이메일 혹은 Issue를 해준다면 언제든지 환영이다. :)
 
+# Result
+- 학습 과정 중에서의 정확도
+
+![Accuracy result in train](./docs/fig1.png)
+![Accuracy result in train](./docs/fig2.png)
+
+- Confusion Matrix
+
+![Confusion matrix as subject numbers](./docs/fig3.png)
+![Confusion matrix accuracy](./docs/fig4.png)
+
+```
+              precision    recall  f1-score   support
+
+       0 = N       0.99      1.00      1.00     20125
+       1 = S       0.95      0.90      0.93       609
+       2 = V       0.97      0.97      0.97      1581
+       3 = F       0.92      0.79      0.85       185
+       4 = Q       0.99      0.99      0.99      2395
+
+    accuracy                           0.99     24895
+   macro avg       0.96      0.93      0.95     24895
+weighted avg       0.99      0.99      0.99     24895
+```
+
+가장 먼저 데이터의 비율이 좋지 않았다. F가 가장 적었고 Non-beat 같은 경우도 동일하게 비율이 맞지 않아 제대로 된 학습이 안될거라고 생각이 되었으나 예상 외로 너무 좋은 결과가 나왔다. Normal beat는 100% 가까이 잡아냈고 다른 beats 또한 나름 준수한 성적을 보여주었다. 
+
+언급한바와 같이 F Class의 정확도는 79%로 굉장히 낮게 나왔지만 어쩔수 없다고 생각한다. 데이터의 비중, 비율 등이 부족했다고 생각 되기에 제대로 찾지 못한 것 같다. 
