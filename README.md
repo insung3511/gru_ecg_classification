@@ -8,6 +8,7 @@
 이 외의 질문이나 혹은 문제점이 있다면 이메일 혹은 Issue를 해준다면 언제든지 환영이다. :)
 
 # Result
+## Data cutted as pickle
 - 학습 과정 중에서의 정확도
 
 ![Accuracy result in train](./docs/fig1.png)
