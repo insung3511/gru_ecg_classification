@@ -44,6 +44,7 @@ weighted avg       0.99      0.99      0.99     24895
 ![Accuracy result in train that rebalanced data](./docs/fig6.png)
 
 - Confusion Matrix
+
 ![Confusion Matrix as subject numbers](./docs/fig7.png)
 ![Confusion Matrix as Accuracy](./docs/fig8.png)
 
