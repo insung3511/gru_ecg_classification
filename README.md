@@ -36,3 +36,29 @@ weighted avg       0.99      0.99      0.99     24895
 가장 먼저 데이터의 비율이 좋지 않았다. F가 가장 적었고 Non-beat 같은 경우도 동일하게 비율이 맞지 않아 제대로 된 학습이 안될거라고 생각이 되었으나 예상 외로 너무 좋은 결과가 나왔다. Normal beat는 100% 가까이 잡아냈고 다른 beats 또한 나름 준수한 성적을 보여주었다. 
 
 언급한바와 같이 F Class의 정확도는 79%로 굉장히 낮게 나왔지만 어쩔수 없다고 생각한다. 데이터의 비중, 비율 등이 부족했다고 생각 되기에 제대로 찾지 못한 것 같다. 
+
+## Data Rebalanced result
+- 학습 과정 중에서의 정확도 및 Loss 값
+
+![Accuracy result in train that rebalanced data](./docs/fig5.png)
+![Accuracy result in train that rebalanced data](./docs/fig6.png)
+
+- Confusion Matrix
+![Confusion Matrix as subject numbers](./docs/fig7.png)
+![Confusion Matrix as Accuracy](./docs/fig8.png)
+
+```
+              precision    recall  f1-score   support
+
+       0 = N       0.98      0.98      0.98      1989
+       1 = S       0.97      0.94      0.95       568
+       2 = V       0.97      0.99      0.98      1480
+       3 = F       0.95      0.88      0.91       162
+       4 = Q       1.00      1.00      1.00      1602
+
+    accuracy                           0.98      5801
+   macro avg       0.97      0.96      0.96      5801
+weighted avg       0.98      0.98      0.98      5801
+```
+
+Rebalanced 된 데이터로 돌려서 나온 결과 값이다. 모두 90% 이상의 성능을 보여주고 있으며 Normal 비트보다 Unclassed 비트를 더욱이 잘 찾아내는 결과를 보여주고 있다. 기존 성능 대비 False alarm 비트 또한 더욱이 좋은 성능을 보여준다. 전체 정확도는 F1-Score 기준으로 98%로 나왔다.
