@@ -72,6 +72,7 @@ Rebalanced 된 데이터로 돌려서 나온 결과 값이다. 모두 90% 이상
 ![Accuracy result in train that filtered data](./docs/fig10.png)
 
 - Confusion Matrix
+
 ![Confusion Matrix as subject numbers](./docs/fig11.png)
 ![Confusion Matrix as Accuracy](./docs/fig12.png)
 
