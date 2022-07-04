@@ -40,7 +40,7 @@ weighted avg       0.99      0.99      0.99     24895
 ## Data Rebalanced result
 - 학습 과정 중에서의 정확도 및 Loss 값
 
-![Accuracy result in train that rebalanced data](./docs/fig5.png)
+![Loss result in train that rebalanced data](./docs/fig5.png)
 ![Accuracy result in train that rebalanced data](./docs/fig6.png)
 
 - Confusion Matrix
@@ -63,3 +63,28 @@ weighted avg       0.98      0.98      0.98      5801
 ```
 
 Rebalanced 된 데이터로 돌려서 나온 결과 값이다. 모두 90% 이상의 성능을 보여주고 있으며 Normal 비트보다 Unclassed 비트를 더욱이 잘 찾아내는 결과를 보여주고 있다. 기존 성능 대비 False alarm 비트 또한 더욱이 좋은 성능을 보여준다. 전체 정확도는 F1-Score 기준으로 98%로 나왔다.
+
+## Data filtered result
+
+- 학습 과정 중에서의 정확도 및 Loss 값
+
+![Loss result in train that filtered data](./docs/fig9.png)
+![Accuracy result in train that filtered data](./docs/fig10.png)
+
+- Confusion Matrix
+![Confusion Matrix as subject numbers](./docs/fig11.png)
+![Confusion Matrix as Accuracy](./docs/fig12.png)
+
+```
+            precision    recall  f1-score   support
+
+       0 = N       0.99      1.00      1.00     20105
+       1 = S       0.96      0.90      0.93       581
+       2 = V       0.98      0.98      0.98      1601
+       3 = F       0.90      0.84      0.87       181
+       4 = Q       1.00      0.99      1.00      1731
+
+    accuracy                           0.99     24199
+   macro avg       0.97      0.94      0.95     24199
+weighted avg       0.99      0.99      0.99     24199
+```
