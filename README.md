@@ -89,3 +89,30 @@ Rebalanced 된 데이터로 돌려서 나온 결과 값이다. 모두 90% 이상
    macro avg       0.97      0.94      0.95     24199
 weighted avg       0.99      0.99      0.99     24199
 ```
+
+# Random padding train and test result
+학습 데이터는 랜덤으로 각 비트를 패딩 해주며 클래스 비율을 모두 맞춰주었다. 테스트 데이터는 미리 나누어 기존에 쓰던 가운데에 두는 패딩 방식으로 진행함.
+
+- 학습 과정 중에서의 정확도 및 Loss 값
+
+![Loss result in train that filtered data](./docs/fig13.png)
+![Accuracy result in train that filtered data](./docs/fig14.png)
+
+- Confusion Matrix
+
+![Confusion Matrix as subject numbers](./docs/fig15.png)
+![Confusion Matrix as Accuracy](./docs/fig16.png)
+```
+              precision    recall  f1-score   support
+
+       0 = N       0.98      0.98      0.98      1989
+       1 = S       0.96      0.96      0.96       568
+       2 = V       0.99      0.98      0.98      1480
+       3 = F       0.86      0.95      0.90       162
+       4 = Q       1.00      1.00      1.00      1602
+
+    accuracy                           0.98      5801
+   macro avg       0.96      0.97      0.96      5801
+weighted avg       0.98      0.98      0.98      5801
+
+```
